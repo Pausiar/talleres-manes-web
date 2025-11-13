@@ -9,6 +9,25 @@ body {
     background: #0a0e27;
     color: #fff;
     overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100vh;
+}
+
+/* Custom Scrollbar - Hidden/Minimal */
+.services::-webkit-scrollbar,
+.information::-webkit-scrollbar,
+.contact::-webkit-scrollbar,
+.location::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.services,
+.information,
+.contact,
+.location {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
 }
 
 /* Logo Container */
@@ -339,6 +358,9 @@ body {
     background: linear-gradient(180deg, #0a0e27 0%, #0d1430 100%);
     position: relative;
     min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
     display: none;
     padding-top: 150px;
     animation: fadeIn 0.5s ease-in-out;
@@ -568,6 +590,9 @@ body {
     padding: 6rem 2rem;
     background: linear-gradient(180deg, #0d1430 0%, #0a0e27 100%);
     min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
     display: none;
     align-items: center;
     padding-top: 150px;
@@ -629,6 +654,9 @@ body {
     padding: 6rem 2rem;
     background: linear-gradient(180deg, #0a0e27 0%, #0d1430 100%);
     min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
     display: none;
     align-items: center;
     padding-top: 150px;
@@ -736,6 +764,9 @@ body {
     padding: 6rem 2rem;
     background: linear-gradient(180deg, #0d1430 0%, #0a0e27 100%);
     min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
     display: none;
     align-items: center;
     padding-top: 150px;
