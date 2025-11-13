@@ -17,28 +17,6 @@
 - JavaScript (Vanilla JS)
 - SVG (Iconos personalizados)
 
-## 📁 Estructura del Proyecto
-
-```
-talleres-manes-web/
-├── index.html
-├── css/
-│   └── styles.css
-├── js/
-│   └── script.js
-├── img/
-│   ├── logo.png
-│   ├── talleres-manes-entrada.png
-│   ├── tallers-manes-mod.png
-│   └── svg/
-│       ├── mecanica.svg
-│       ├── itv.svg
-│       ├── neumaticos.svg
-│       ├── electrico.svg
-│       ├── frenos.svg
-│       └── aceite.svg
-└── audio/
-```
 
 ## 🚀 Demo en Vivo
 
@@ -52,16 +30,6 @@ talleres-manes-web/
 - **Contacto**: Formulario y datos de contacto
 - **Localización**: Mapa y dirección
 
-## 🎯 Instalación
-
-1. Clona el repositorio:
-```bash
-git clone https://github.com/tu-usuario/talleres-manes-web.git
-```
-
-2. Abre `index.html` en tu navegador
-
-¡Eso es todo! No requiere instalación de dependencias.
 
 ## 🌟 Créditos
 
