@@ -1,0 +1,15 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Simple wrench shape -->
+  <path d="M55 15L45 25L35 15L30 20L40 30L25 45L20 40L10 50L30 70L40 60L35 55L50 40L60 50L65 45L55 35L65 25L55 15Z" 
+        fill="#00d4ff" stroke="#00d4ff" stroke-width="2" stroke-linejoin="round" filter="url(#glow)"/>
+  <circle cx="25" cy="55" r="3" fill="#0a0e27"/>
+</svg>

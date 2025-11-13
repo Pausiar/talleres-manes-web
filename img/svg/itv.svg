@@ -1,0 +1,17 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Gear teeth -->
+  <path d="M40 8 L44 15 L52 15 L54 22 L62 24 L62 32 L68 36 L68 44 L62 48 L62 56 L54 58 L52 65 L44 65 L40 72 L36 65 L28 65 L26 58 L18 56 L18 48 L12 44 L12 36 L18 32 L18 24 L26 22 L28 15 L36 15 Z" 
+        fill="#00d4ff" stroke="#00d4ff" stroke-width="2" stroke-linejoin="round" filter="url(#glow)"/>
+  <!-- Inner circle -->
+  <circle cx="40" cy="40" r="15" fill="#0a0e27" stroke="#00d4ff" stroke-width="3" filter="url(#glow)"/>
+  <circle cx="40" cy="40" r="8" fill="#00d4ff" filter="url(#glow)"/>
+</svg>

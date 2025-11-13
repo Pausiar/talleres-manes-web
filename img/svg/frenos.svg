@@ -1,0 +1,24 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Brake disc -->
+  <circle cx="40" cy="40" r="26" stroke="#00d4ff" stroke-width="5" fill="none" filter="url(#glow)"/>
+  <circle cx="40" cy="40" r="16" stroke="#00d4ff" stroke-width="2" fill="none" filter="url(#glow)"/>
+  <!-- Disc holes/vents -->
+  <circle cx="40" cy="20" r="2.5" fill="#00d4ff" filter="url(#glow)"/>
+  <circle cx="52" cy="28" r="2.5" fill="#00d4ff" filter="url(#glow)"/>
+  <circle cx="52" cy="52" r="2.5" fill="#00d4ff" filter="url(#glow)"/>
+  <circle cx="40" cy="60" r="2.5" fill="#00d4ff" filter="url(#glow)"/>
+  <circle cx="28" cy="52" r="2.5" fill="#00d4ff" filter="url(#glow)"/>
+  <circle cx="28" cy="28" r="2.5" fill="#00d4ff" filter="url(#glow)"/>
+  <!-- Brake caliper/pads -->
+  <rect x="56" y="28" width="12" height="24" rx="2" fill="#00d4ff" stroke="#00d4ff" stroke-width="2" filter="url(#glow)"/>
+  <rect x="60" y="32" width="4" height="16" fill="#0a0e27"/>
+</svg>

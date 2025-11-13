@@ -1,0 +1,19 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Water drop / oil drop shape -->
+  <path d="M40 12C40 12 22 32 22 48C22 58 30 66 40 66C50 66 58 58 58 48C58 32 40 12 40 12Z" 
+        fill="#00d4ff" stroke="#00d4ff" stroke-width="2" filter="url(#glow)"/>
+  <!-- Highlight on drop -->
+  <ellipse cx="35" cy="38" rx="6" ry="10" fill="#ffffff" opacity="0.3"/>
+  <!-- Small drops -->
+  <circle cx="28" cy="26" r="3" fill="#00d4ff" filter="url(#glow)"/>
+  <circle cx="52" cy="26" r="3" fill="#00d4ff" filter="url(#glow)"/>
+</svg>
