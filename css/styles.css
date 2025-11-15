@@ -848,24 +848,33 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
     .logo-container {
-        top: 1rem;
-        left: 1rem;
-        padding: 0.5rem 0.8rem;
+        top: 0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0.4rem 0.8rem;
     }
 
     .main-logo {
-        height: 55px;
+        height: 45px;
     }
 
     .navbar {
-        top: 1rem;
-        right: 1rem;
-        gap: 0.8rem;
-        padding: 0.6rem 1rem;
+        top: auto;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+        gap: 0.5rem;
+        padding: 0.8rem 1rem;
+        flex-wrap: nowrap;
+        width: calc(100% - 2rem);
+        max-width: 500px;
+        justify-content: space-between;
     }
 
     .nav-link {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
+        padding: 0.3rem 0.5rem;
     }
 
     .features {
@@ -913,6 +922,27 @@ body {
 
     .info-content {
         grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        padding-bottom: 6rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .services,
+    .information,
+    .contact,
+    .location {
+        padding-top: 5rem;
+        padding-bottom: 6rem;
     }
 
     .contact-item {
