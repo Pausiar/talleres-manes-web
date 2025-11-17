@@ -355,7 +355,10 @@ body {
 /* Services Section */
 .services {
     padding: 6rem 2rem;
-    background: linear-gradient(180deg, #0a0e27 0%, #0d1430 100%);
+    background: linear-gradient(rgba(10, 14, 39, 0.85), rgba(13, 20, 48, 0.85)), url('../img/bg/bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     position: relative;
     min-height: 100vh;
     max-height: 100vh;
@@ -588,7 +591,10 @@ body {
 /* Information Section */
 .information {
     padding: 6rem 2rem;
-    background: linear-gradient(180deg, #0d1430 0%, #0a0e27 100%);
+    background: linear-gradient(rgba(13, 20, 48, 0.85), rgba(10, 14, 39, 0.85)), url('../img/bg/bg2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     min-height: 100vh;
     max-height: 100vh;
     overflow-y: auto;
@@ -652,7 +658,10 @@ body {
 /* Contact Section */
 .contact {
     padding: 6rem 2rem;
-    background: linear-gradient(180deg, #0a0e27 0%, #0d1430 100%);
+    background: linear-gradient(rgba(10, 14, 39, 0.85), rgba(13, 20, 48, 0.85)), url('../img/bg/bg3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     min-height: 100vh;
     max-height: 100vh;
     overflow-y: auto;
@@ -759,7 +768,10 @@ body {
 /* Location Section */
 .location {
     padding: 6rem 2rem;
-    background: linear-gradient(180deg, #0d1430 0%, #0a0e27 100%);
+    background: linear-gradient(rgba(13, 20, 48, 0.85), rgba(10, 14, 39, 0.85)), url('../img/bg/bg4.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     min-height: 100vh;
     max-height: 100vh;
     overflow-y: auto;
