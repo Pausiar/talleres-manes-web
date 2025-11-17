@@ -889,6 +889,7 @@ body {
         justify-content: space-evenly;
         overflow-x: auto;
         overflow-y: hidden;
+        border-bottom: none;
     }
 
     .nav-link {
