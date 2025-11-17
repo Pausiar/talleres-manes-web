@@ -877,19 +877,21 @@ body {
 
     .navbar {
         top: auto;
-        bottom: 0.5rem;
-        left: 50%;
-        transform: translateX(-50%);
-        right: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: none;
         gap: 0.3rem;
-        padding: 0.6rem 0.5rem;
+        padding: 0.8rem 0.5rem;
         flex-wrap: nowrap;
-        width: calc(100% - 1rem);
+        width: 100%;
         max-width: 100%;
         justify-content: space-evenly;
         overflow-x: auto;
         overflow-y: hidden;
         border-bottom: none;
+        border: none;
+        margin: 0;
     }
 
     .nav-link {
@@ -947,6 +949,8 @@ body {
     .contact-content {
         width: 100%;
         max-width: 100%;
+        padding: 0;
+        margin: 0 auto;
     }
 
     .info-content {
@@ -959,33 +963,30 @@ body {
 
     .section-title {
         font-size: 2rem;
-        margin-top: 0;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
     }
 
     .section-subtitle {
         font-size: 0.9rem;
     }
 
-    .services {
-        padding-top: 5rem;
-        padding-bottom: 7rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
+    .services,
     .information,
     .contact,
     .location {
-        padding-top: 8rem;
-        padding-bottom: 7rem;
+        padding-top: 6.5rem;
+        padding-bottom: 5rem;
         padding-left: 1rem;
         padding-right: 1rem;
     }
 
     .contact-item {
-        padding: 1.5rem;
-        margin: 0 auto;
+        padding: 1.5rem 1rem;
+        margin: 0;
         width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .contact-form {
