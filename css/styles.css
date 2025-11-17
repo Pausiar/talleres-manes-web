@@ -786,6 +786,11 @@ body {
     overflow: hidden;
     border: 2px solid rgba(0, 212, 255, 0.3);
     box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+    line-height: 0;
+}
+
+.map-placeholder iframe {
+    display: block;
 }
 
 .location-info {
