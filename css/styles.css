@@ -972,17 +972,11 @@ body {
         font-size: 0.9rem;
     }
 
-    .services {
-        padding-top: 6.5rem;
-        padding-bottom: 5rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
+    .services,
     .information,
     .contact,
     .location {
-        padding-top: 5.5rem;
+        padding-top: 6.5rem;
         padding-bottom: 5rem;
         padding-left: 1rem;
         padding-right: 1rem;
