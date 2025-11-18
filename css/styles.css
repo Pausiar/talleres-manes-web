@@ -625,6 +625,7 @@ body {
     border: 1px solid rgba(0, 212, 255, 0.2);
     text-align: center;
     transition: all 0.4s ease;
+    margin-top: 1rem;
 }
 
 .info-card:hover {
