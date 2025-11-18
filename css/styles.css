@@ -613,7 +613,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: 5rem;
+    margin-top: 25rem;
 }
 
 .info-card {
@@ -791,7 +791,7 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 3rem;
-    margin-top: 3rem;
+    margin-top: 25rem;
 }
 
 .map-placeholder {
