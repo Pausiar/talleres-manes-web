@@ -16,6 +16,7 @@ body {
 /* Custom Scrollbar - Hidden/Minimal */
 .services::-webkit-scrollbar,
 .information::-webkit-scrollbar,
+.reviews::-webkit-scrollbar,
 .contact::-webkit-scrollbar,
 .location::-webkit-scrollbar {
     width: 0px;
@@ -24,6 +25,7 @@ body {
 
 .services,
 .information,
+.reviews,
 .contact,
 .location {
     scrollbar-width: none; /* Firefox */
@@ -656,10 +658,162 @@ body {
     line-height: 1.8;
 }
 
+/* Reviews Section */
+.reviews {
+    padding: 6rem 2rem;
+    background: linear-gradient(rgba(10, 14, 39, 0.85), rgba(13, 20, 48, 0.85)), url('../img/bg/bg3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: none;
+    align-items: center;
+    padding-top: 150px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.reviews.active {
+    display: block;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.review-card {
+    background: rgba(15, 25, 45, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 212, 255, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+}
+
+.review-stars {
+    color: #ffd700;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.review-text {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    font-size: 1rem;
+    font-style: italic;
+    flex-grow: 1;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.author-initial {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00d4ff 0%, #0066ff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.review-author h4 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.2rem;
+}
+
+.review-author span {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+}
+
+.google-rating {
+    background: rgba(15, 25, 45, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.rating-score {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.score {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #00d4ff;
+    line-height: 1;
+}
+
+.rating-stars {
+    color: #ffd700;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+}
+
+.google-rating p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
+
+.google-link {
+    background: linear-gradient(135deg, #00d4ff 0%, #0066ff 100%);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.google-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+}
+
 /* Contact Section */
 .contact {
     padding: 6rem 2rem;
-    background: linear-gradient(rgba(10, 14, 39, 0.85), rgba(13, 20, 48, 0.85)), url('../img/bg/bg3.jpg');
+    background: linear-gradient(rgba(10, 14, 39, 0.85), rgba(13, 20, 48, 0.85)), url('../img/bg/bg4.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -769,7 +923,7 @@ body {
 /* Location Section */
 .location {
     padding: 6rem 2rem;
-    background: linear-gradient(rgba(13, 20, 48, 0.85), rgba(10, 14, 39, 0.85)), url('../img/bg/bg4.png');
+    background: linear-gradient(rgba(13, 20, 48, 0.85), rgba(10, 14, 39, 0.85)), url('../img/bg/bg1.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -974,12 +1128,34 @@ body {
 
     .services,
     .information,
+    .reviews,
     .contact,
     .location {
         padding-top: 6.5rem;
         padding-bottom: 5rem;
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .google-rating {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .rating-score {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .google-link {
+        width: 100%;
+        text-align: center;
     }
 
     .contact-item {
