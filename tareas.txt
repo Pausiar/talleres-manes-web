@@ -1,5 +1,3 @@
-- pantalla principal con sistema de navegacion, logo y fondo interactuable 
-- servicios que se vean bien vissualmente con fotos descriupción corta https://www.markz3d.com/products/maps
-- informacion https://www.markz3d.com/faq
-- contacto https://www.markz3d.com/partners
-- localizaciones https://www.markz3d.com/products/maps/money-fronts-businesses
+- poner los precios que toca
+- revisar que toda la infor sea correcta
+- 
