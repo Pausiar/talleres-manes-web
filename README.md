@@ -22,6 +22,12 @@
 
 [Ver Demo](https://pausiar.github.io/talleres-manes-web/)
 
+## 🐛 Issues y Tareas Pendientes
+
+Para crear los issues identificados en `tareas.txt`, consulta la [Guía de Issues](ISSUES_README.md).
+
+**Quick start**: Ejecuta `./create-issues.sh` para crear automáticamente todos los issues en GitHub.
+
 ##  Secciones
 
 - **Inicio**: Hero con efecto linterna interactivo
