@@ -1,9 +1,27 @@
 #!/bin/bash
 
+# Exit on any error
+set -e
+
 # Script to create GitHub issues from tareas.txt
 # Usage: ./create-issues.sh
 # Requirements: GitHub CLI (gh) must be installed and authenticated
 
+# Check if GitHub CLI is installed
+if ! command -v gh &> /dev/null; then
+    echo "❌ Error: GitHub CLI (gh) is not installed."
+    echo "Please install it from: https://cli.github.com/"
+    exit 1
+fi
+
+# Check if authenticated with GitHub
+if ! gh auth status &> /dev/null; then
+    echo "❌ Error: Not authenticated with GitHub."
+    echo "Please run: gh auth login"
+    exit 1
+fi
+
+echo "✓ GitHub CLI is installed and authenticated"
 echo "Creating GitHub issues from tareas.txt..."
 echo ""
 
@@ -135,4 +153,7 @@ Realizar una revisión completa de todo el contenido del sitio web para asegurar
 echo ""
 echo "✅ All issues created successfully!"
 echo ""
-echo "View issues at: https://github.com/Pausiar/talleres-manes-web/issues"
+
+# Get repository URL dynamically
+REPO_URL=$(gh repo view --json url -q .url 2>/dev/null || echo "https://github.com/Pausiar/talleres-manes-web")
+echo "View issues at: ${REPO_URL}/issues"
