@@ -80,6 +80,13 @@ document.addEventListener('DOMContentLoaded', () => {
             loadingScreen.classList.add('hidden');
         }
     }, 2000); // Mínimo 2 segundos para que se vea la animación
+    
+    // Set minimum date for booking form
+    const dateInput = document.getElementById('date');
+    if (dateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+    }
 });
 
 // Hide loading screen when everything is fully loaded
@@ -91,6 +98,86 @@ window.addEventListener('load', () => {
         }
     }, 1500);
 });
+
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        // Open clicked item if it wasn't active
+        if (!isActive) {
+            faqItem.classList.add('active');
+        }
+    });
+});
+
+// Back to Top Button
+const backToTopBtn = document.getElementById('backToTop');
+
+if (backToTopBtn) {
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+
+    // Scroll to top when clicked
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Booking Form Submission
+const bookingForm = document.getElementById('bookingForm');
+if (bookingForm) {
+    bookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = {
+            name: document.getElementById('name').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value,
+            service: document.getElementById('service').value,
+            date: document.getElementById('date').value,
+            message: document.getElementById('message').value
+        };
+        
+        // Create WhatsApp message
+        const serviceOption = document.querySelector(`#service option[value="${formData.service}"]`);
+        const serviceName = serviceOption ? serviceOption.textContent : 'No especificado';
+        const whatsappMessage = `Hola, me gustaría solicitar una cita:%0A%0ANombre: ${formData.name}%0ATeléfono: ${formData.phone}%0AEmail: ${formData.email}%0AServicio: ${serviceName}%0AFecha preferida: ${formData.date}%0A${formData.message ? 'Mensaje: ' + formData.message : ''}`;
+        
+        // Open WhatsApp
+        window.open(`https://wa.me/34964591212?text=${whatsappMessage}`, '_blank');
+        
+        // Reset form
+        bookingForm.reset();
+        
+        // Show confirmation (you can replace this with a custom notification)
+        const submitButton = bookingForm.querySelector('.submit-button');
+        const originalText = submitButton.innerHTML;
+        submitButton.innerHTML = '<span>✓ Enviado a WhatsApp</span>';
+        submitButton.style.background = '#25D366';
+        
+        setTimeout(() => {
+            submitButton.innerHTML = originalText;
+            submitButton.style.background = '';
+        }, 3000);
+    });
+}
 
 // Logo 3D Tilt Effect
 const logoContainer = document.querySelector('.logo-container');
