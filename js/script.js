@@ -120,22 +120,24 @@ document.querySelectorAll('.faq-question').forEach(question => {
 // Back to Top Button
 const backToTopBtn = document.getElementById('backToTop');
 
-// Show/hide button based on scroll position
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-        backToTopBtn.classList.add('visible');
-    } else {
-        backToTopBtn.classList.remove('visible');
-    }
-});
-
-// Scroll to top when clicked
-backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+if (backToTopBtn) {
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
     });
-});
+
+    // Scroll to top when clicked
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
 
 // Booking Form Submission
 const bookingForm = document.getElementById('bookingForm');
@@ -154,7 +156,8 @@ if (bookingForm) {
         };
         
         // Create WhatsApp message
-        const serviceName = document.querySelector(`#service option[value="${formData.service}"]`).textContent;
+        const serviceOption = document.querySelector(`#service option[value="${formData.service}"]`);
+        const serviceName = serviceOption ? serviceOption.textContent : 'No especificado';
         const whatsappMessage = `Hola, me gustaría solicitar una cita:%0A%0ANombre: ${formData.name}%0ATeléfono: ${formData.phone}%0AEmail: ${formData.email}%0AServicio: ${serviceName}%0AFecha preferida: ${formData.date}%0A${formData.message ? 'Mensaje: ' + formData.message : ''}`;
         
         // Open WhatsApp
@@ -163,8 +166,16 @@ if (bookingForm) {
         // Reset form
         bookingForm.reset();
         
-        // Show confirmation message
-        alert('¡Gracias! Te redirigimos a WhatsApp para confirmar tu cita.');
+        // Show confirmation (you can replace this with a custom notification)
+        const submitButton = bookingForm.querySelector('.submit-button');
+        const originalText = submitButton.innerHTML;
+        submitButton.innerHTML = '<span>✓ Enviado a WhatsApp</span>';
+        submitButton.style.background = '#25D366';
+        
+        setTimeout(() => {
+            submitButton.innerHTML = originalText;
+            submitButton.style.background = '';
+        }, 3000);
     });
 }
 
