@@ -1,5 +1,5 @@
 - el footer no se ve
-- añadir margen por arriba aen las vista de: FAQ, contacto
-- hay dos pestañas que hay texto arriba que se tapa porque se pone el margen pero el texto se queda arriba: informacion, FAQ, localización
-- revisar que toda la infor sea correcta
+- añadir margen por arriba en las vistas de: FAQ, contacto
+- hay tres pestañas que hay texto arriba que se tapa porque se pone el margen pero el texto se queda arriba: informacion, FAQ, localización
+- revisar que toda la información sea correcta
 - 
