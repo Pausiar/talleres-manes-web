@@ -1151,13 +1151,12 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     display: none;
-    align-items: center;
     padding-top: 150px;
     animation: fadeIn 0.5s ease-in-out;
 }
 
 .contact.active {
-    display: flex;
+    display: block;
 }
 
 .contact-content {
@@ -1466,6 +1465,10 @@ body {
         padding-right: 1rem;
     }
 
+    .contact .section-title {
+        margin-top: 2rem;
+    }
+
     .reviews-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -1672,6 +1675,11 @@ body {
 
 .form-group select {
     cursor: pointer;
+}
+
+.form-group select option {
+    background: #1a1a2e;
+    color: #fff;
 }
 
 .form-group textarea {
