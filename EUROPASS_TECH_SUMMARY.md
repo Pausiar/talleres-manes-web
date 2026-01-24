@@ -2,7 +2,7 @@
 ## Tecnologías y Metodologías Utilizadas (Para Europass)
 
 ### 1. **Desarrollo Frontend con HTML5, CSS3 y JavaScript Vanilla**
-   - Creación de una página web moderna de una sola página (SPA) sin frameworks
+   - Creación de una página web moderna con múltiples secciones sin frameworks
    - Implementación de HTML5 semántico para mejorar accesibilidad y SEO
    - JavaScript puro (Vanilla JS) para manipulación del DOM e interacciones
 
