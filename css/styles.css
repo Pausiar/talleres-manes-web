@@ -709,6 +709,7 @@ body {
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 900;
     text-align: center;
+    margin-top: 2rem;
     margin-bottom: 1rem;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -722,7 +723,7 @@ body {
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
     font-size: 1.1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
     letter-spacing: 1px;
 }
 
@@ -966,7 +967,8 @@ body {
 }
 
 .info-icon {
-    font-size: 4rem;
+    width: 64px;
+    height: 64px;
     margin-bottom: 1.5rem;
     filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.6));
 }
@@ -1188,7 +1190,9 @@ body {
 }
 
 .contact-icon {
-    font-size: 2.5rem;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
     filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.6));
 }
 
@@ -1325,6 +1329,9 @@ body {
     padding: 0.8rem 0;
     font-size: 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
 }
 
 .location-info ul li:last-child {
@@ -1343,6 +1350,10 @@ body {
     color: rgba(255, 255, 255, 0.6);
     font-size: 0.9rem;
     margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 /* Responsive */
